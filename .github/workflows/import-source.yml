@@ -1,0 +1,21 @@
+name: Import project source once
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Expand sanitized source package
+        run: |
+          unzip -q IT0049-Submission.zip -d "$RUNNER_TEMP/pos-import"
+          cp -a "$RUNNER_TEMP/pos-import/IT0049/." .
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app public tests database docs writable .env.example .gitignore composer.json composer.lock README.md LICENSE env phpunit.dist.xml phpunit.pos.xml preload.php spark START-LOCAL.cmd builds
+          if ! git diff --cached --quiet; then
+            git commit -m "Expand complete CodeIgniter POS source"
+            git push
+          fi
