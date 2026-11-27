@@ -1,0 +1,22 @@
+VALIDATION — 27 November 2026 (Asia/Manila)
+
+Environment: Windows, PHP 8.5.13, CodeIgniter 4.7.6, MariaDB 10.11.19, SQLite3, GD.
+
+Passed:
+- PHP syntax check for all application PHP files.
+- Fresh migration and seeder execution on SQLite and MariaDB.
+- PHPUnit POS suite: 5 tests, 19 assertions.
+- HTTP suite on isolated MariaDB: 33 checks, including authentication redirects,
+  invalid credentials, CSRF rejection, validated CRUD for all three directories,
+  product image/avatar conversion, executable-file rejection, duplicate username,
+  self-delete rejection, overselling, precise totals and preserved sales history.
+- Parallel PHP processes using SaleRecorder against the last unit in MariaDB:
+  one accepted, one rejected; stock zero and exactly one sale.
+- Browser login, dashboard, oversell message, sale history and changed stock.
+- Responsive interface visually reviewed in the in-app browser.
+
+Limits:
+- Public hosting has not been provisioned or verified.
+- No GitHub repository has been created/pushed.
+- Local preview uses SQLite; MariaDB was tested in an isolated workspace database.
+- The included MySQL export is clean seeded data, without integration test rows.
