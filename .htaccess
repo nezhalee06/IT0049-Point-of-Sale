@@ -1,0 +1,6 @@
+Options -Indexes
+RewriteEngine On
+# Only the public front controller and assets may be served by a shared host.
+RewriteRule ^(?:app|vendor|writable|tests|database|docs)(?:/|$) - [F,L,NC]
+RewriteRule ^(?:\.|composer\.|spark$|env$|README|LICENSE|START-LOCAL|phpunit|preload|builds) - [F,L,NC]
+RewriteRule ^(?!public(?:/|$))(.*)$ public/$1 [L]

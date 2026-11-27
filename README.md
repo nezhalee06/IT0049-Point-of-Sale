@@ -1,5 +1,7 @@
 # Counter — IT0049 Point-of-Sale System
 
+Live application: https://it0049-counter-pos.42web.io/
+
 CodeIgniter 4.7.6 / PHP / MySQL or MariaDB. Created for the IT0049 midterm brief supplied by Rodriguez, Robert Enzo / John Paul Dela Cruz. Confirm your section, professor and member roles if your instructor separately requests a cover sheet.
 
 ## Run on this computer
@@ -72,7 +74,11 @@ git push -u origin main
 
 Use a PHP-capable host with MySQL/MariaDB and persistent writable storage. Follow the MySQL setup above using the host's database credentials. GitHub Pages cannot execute this PHP application. The host must serve `public/`, preserve uploaded images in `writable/uploads/pos`, and support rewritten routes. Do not expose the entire repository as the web root. After deployment, verify login, product upload, a successful sale, oversell rejection and sales history from the public URL. Send the instructor demo login details privately if required.
 
-Repository: https://github.com/nezhalee06/IT0049-Point-of-Sale . Public hosting is still pending.
+Repository: https://github.com/nezhalee06/IT0049-Point-of-Sale
+
+Hosted application: https://it0049-counter-pos.42web.io/
+
+Hosting uses the included root `.htaccess` to route requests into `public/` while denying direct access to application code, dependencies and private environment files on the fixed shared-host document root. Environment credentials and the initial hosted staff account are configured privately.
 
 ## Architecture and schema
 
