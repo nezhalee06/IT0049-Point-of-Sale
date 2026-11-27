@@ -2,7 +2,7 @@
 
 Live application: https://it0049-counter-pos.42web.io/
 
-CodeIgniter 4.7.6 / PHP / MySQL or MariaDB. Created for the IT0049 midterm brief supplied by Rodriguez, Robert Enzo / John Paul Dela Cruz. Confirm your section, professor and member roles if your instructor separately requests a cover sheet.
+CodeIgniter 4.7.6 / PHP / MySQL or MariaDB. Created for the IT0049 Midterm Project by Rodriguez, Robert Enzo (Encoder) & Dela Cruz, John Paul (Designer). BSIT - AGD, Section AX 31. Professor: Merlin Marfa.
 
 ## Run on this computer
 
