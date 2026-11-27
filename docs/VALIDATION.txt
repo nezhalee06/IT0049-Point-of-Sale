@@ -16,7 +16,11 @@ Passed:
 - Responsive interface visually reviewed in the in-app browser.
 
 Limits:
-- Public hosting has not been provisioned or verified.
-- No GitHub repository has been created/pushed.
+- Public deployment: https://it0049-counter-pos.42web.io/
+  HTTPS sign-in, directory pages, oversell rejection, successful sale, sales
+  history and exact stock deduction verified in the browser.
+  Sample verification sale: two notebooks, PHP 130.00, stock 50 -> 48.
+- Raw source published at https://github.com/nezhalee06/IT0049-Point-of-Sale
+  One-time import succeeded and its workflow was removed.
 - Local preview uses SQLite; MariaDB was tested in an isolated workspace database.
 - The included MySQL export is clean seeded data, without integration test rows.
